@@ -35,6 +35,7 @@
 html,
 body {
 	height: 100%;
+	width: 100vw;
 	font-family: "Work Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
@@ -2236,7 +2237,7 @@ ol {
 
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1470px;
+		max-width: 1400px;
 	}
 	.hero-section {
 		padding-top: 75vh;
