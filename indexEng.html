@@ -1434,19 +1434,19 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form action="#" class="comment-form contact-form">
+                            <form action="send_email.php" method="post" class="comment-form contact-form">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        <input type="text" placeholder="Name">
+                                        <input type="text" name="name" placeholder="Name" required>
                                     </div>
                                     <div class="col-lg-4">
-                                        <input type="text" placeholder="Email">
+                                        <input type="text" name="email" placeholder="Email" required>
                                     </div>
                                     <div class="col-lg-4">
-                                        <input type="text" placeholder="Phone">
+                                        <input type="text" name="phone" placeholder="Phone" required>
                                     </div>
                                     <div class="col-lg-12">
-                                        <select class="form-select form-select-lg selectBox" id="basicSelect">
+                                        <select class="form-select form-select-lg selectBox" id="basicSelect" name="ticket" required>
                                             <option selected disabled>Select Ticket</option>
                                             <option value="fullPass">FULL PASS</option>
                                             <option value="partyPass">PARTY PASS</option>
@@ -1459,7 +1459,7 @@
                                     <br>
                                     <div class="col-lg-12 text-center">
                                         <!-- <label for="comboBoxInput" class="form-label">Select an option</label> -->
-                                        <textarea placeholder="Messages"></textarea>
+                                        <textarea placeholder="Messages" name="message"></textarea>
                                         <hr>
                                         <button type="submit" class="site-btn">Sent Order</button>
                                     </div>

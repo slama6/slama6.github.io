@@ -1430,19 +1430,19 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form action="#" class="comment-form contact-form">
+                            <form action="send_email.php" method="post" class="comment-form contact-form">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        <input type="text" placeholder="Meno" required>
+                                        <input type="text" name="name" placeholder="Meno" required>
                                     </div>
                                     <div class="col-lg-4">
-                                        <input type="text" placeholder="Email" required>
+                                        <input type="text"  name="email" placeholder="Email" required>
                                     </div>
                                     <div class="col-lg-4">
-                                        <input type="text" placeholder="Telefón" required>
+                                        <input type="text" name="phone" placeholder="Telefón" required>
                                     </div>
                                     <div class="col-lg-12">
-                                        <select class="form-select form-select-lg selectBox" id="basicSelect">
+                                        <select class="form-select form-select-lg selectBox" id="basicSelect" name="ticket" required>
                                             <option selected disabled>Vyberte vstupenku</option>
                                             <option value="fullPass">FULL PASS</option>
                                             <option value="partyPass">PARTY PASS</option>
@@ -1455,7 +1455,7 @@
                                     <br>
                                     <div class="col-lg-12 text-center">
                                         <!-- <label for="comboBoxInput" class="form-label">Select an option</label> -->
-                                        <textarea placeholder="Poznámka"></textarea>
+                                        <textarea placeholder="Poznámka" name="message"></textarea>
                                         <hr>
                                         <button type="submit" class="site-btn">Odoslať objednávku</button>
                                     </div>
