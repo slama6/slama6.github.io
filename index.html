@@ -91,38 +91,38 @@
     <!-- Hero Section End -->
 
     <!-- Counter Section Begin -->
-    <!-- <section class="counter-section bg-gradient">
+    <section class="counter-section bg-gradient">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="counter-text">
-                        <span>Conference Date</span>
-                        <h3>Count Every Second <br />Until the Event</h3>
+                        <span>Začiatok konferencie</span>
+                        <h3>Animeshow 2025 <br />Game Salón</h3>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="cd-timer" id="countdown">
                         <div class="cd-item">
                             <span>40</span>
-                            <p>Days</p>
+                            <p>Dní</p>
                         </div>
                         <div class="cd-item">
                             <span>18</span>
-                            <p>Hours</p>
+                            <p>Hodín</p>
                         </div>
                         <div class="cd-item">
                             <span>46</span>
-                            <p>Minutes</p>
+                            <p>Minút</p>
                         </div>
                         <div class="cd-item">
                             <span>32</span>
-                            <p>Seconds</p>
+                            <p>Sekúnd</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- Counter Section End -->
 
     <!-- Home About Section Begin -->
@@ -1357,7 +1357,8 @@
                             <li><b>Vstup platný len pre piatok alebo nedelu</b></li>
                             <li>Jednodenný vstup</li>
                         </ul>
-                        <a href="https://www.comics-salon.sk/shop/vstupenky/" target="_blank" class="price-btn">Kúpiť vstupenku <span class="arrow_right"></span></a>
+                        <!-- <a href="https://www.comics-salon.sk/shop/vstupenky/" target="_blank" class="price-btn">Kúpiť vstupenku <span class="arrow_right"></span></a> -->
+                        <button class="price-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Kúpiť vstupenku <span class="arrow_right"></span></button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-8">
@@ -1367,17 +1368,17 @@
                         </div>
                         <h4>Full Pass</h4>
                         <div class="pi-price">
-                            <h2><span>&euro;</span>40</h2>
+                            <h2><span>&euro;</span>35 <s>40</s></h2>
                         </div>
                         <ul>
-                            <li><b>Vstup na celý festival</b></li>
+                            <li><b>Vstup na celý festival pre vývojárov</b></li>
                             <li>Prístup k zaujímavým prednáškam</li>
                             <li>Osobnosti herného priemyslu</li>
                             <li>Súťaže</li>
                             <li>Herný kvíz</li>
                             <!-- <li>Možnosť rozšírenia vstupu na Sector Party</li> -->
                         </ul>
-                        <a href="https://www.comics-salon.sk/shop/vstupenky/" target="_blank" class="price-btn">Kúpiť vstupenku <span class="arrow_right"></span></a>
+                        <button class="price-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Kúpiť vstupenku <span class="arrow_right"></span></button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-8">
@@ -1396,7 +1397,7 @@
                             <li>Drinky</li>
                             <li>Priateľská atmosféra</li>
                         </ul>
-                        <a href="https://www.comics-salon.sk/shop/vstupenky/" target="_blank" class="price-btn">Kúpiť vstupenku <span class="arrow_right"></span></a>
+                        <button class="price-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Kúpiť vstupenku <span class="arrow_right"></span></button>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-8">
@@ -1409,13 +1410,71 @@
                             <li><b>Vstup platný len pre sobotu</b></li>
                             <li>Jednodenný vstup</li>
                         </ul>
-                        <a href="https://www.comics-salon.sk/shop/vstupenky/" target="_blank" class="price-btn">Kúpiť vstupenku <span class="arrow_right"></span></a>
+                        <!-- <a href="https://www.comics-salon.sk/shop/vstupenky/" target="_blank" class="price-btn">Kúpiť vstupenku <span class="arrow_right"></span></a> -->
+                        <button class="price-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Kúpiť vstupenku <span class="arrow_right"></span></button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Pricing Section End -->
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Objednávka vstupu</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form action="send_email.php" method="post" class="comment-form contact-form">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <input type="text" name="name" placeholder="Meno" required>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <input type="text"  name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <input type="text" name="phone" placeholder="Telefón" required>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <select class="form-select form-select-lg selectBox" id="basicSelect" name="ticket" required>
+                                            <option selected disabled>Vyberte vstupenku</option>
+                                            <option value="35€ Full Pass">FULL PASS</option>
+                                            <option value="60€ Party Pass">PARTY PASS</option>
+                                            <option value="25€ DENNÝ VSTUP 1">DENNÝ VSTUP #1</option>
+                                            <option value="35€ DENNÝ VSTUP 2">DENNÝ VSTUP #2</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="col-lg-12 text-center">
+                                        <!-- <label for="comboBoxInput" class="form-label">Select an option</label> -->
+                                        <textarea placeholder="Poznámka" name="message"></textarea>
+                                        <hr>
+                                        <button type="submit" class="site-btn">Odoslať objednávku</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>* Po odoslaní formuláru budete kontaktovaný s platobnými údajmi pre bankový prevod.</p>
+                    <p>** Po uhradení prevodu obdržíte do e-mailovej schránky potvrdenie vstupu.</p>
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button> -->
+                    <!-- <button type="button" class="site-btn">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of modal -->
+
 
     <!-- latest BLog Section Begin -->
     <!-- <section class="latest-blog spad">
@@ -1604,6 +1663,8 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
 </div>
 </body>
 
