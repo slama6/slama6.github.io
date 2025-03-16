@@ -108,15 +108,20 @@
         mm = parseInt(mm) + 1;
         mm = String(mm).padStart(2, '0');
     }
-    var timerdate = mm + '/' + dd + '/' + yyyy;
+    // var timerdate = mm + '/' + dd + '/' + yyyy;
     // For demo preview end
     
 
     // Use this for real timer date
-    /*  var timerdate = "2020/01/01"; */
+      var timerdate = "2025/03/28"; 
 
 	$("#countdown").countdown(timerdate, function(event) {
+        $(this).html(event.strftime("<div class='cd-item'><span>%D</span> <p>Dní</p> </div>" + "<div class='cd-item'><span>%H</span> <p>Hodín</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Minút</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Sekúnd</p> </div>"));
+    });
+
+    $("#countdownEng").countdown(timerdate, function(event) {
         $(this).html(event.strftime("<div class='cd-item'><span>%D</span> <p>Days</p> </div>" + "<div class='cd-item'><span>%H</span> <p>Hrs</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Mins</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Secs</p> </div>"));
     });
+
 
 })(jQuery);
