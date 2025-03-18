@@ -31,11 +31,14 @@
 
 /* Template default CSS
 /*----------------------------------------*/
+html{
+	overflow-x: hidden;
+}
 
 html,
 body {
 	height: 100%;
-	width: 100vw;
+	/* width: 100vw; */
 	font-family: "Work Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
