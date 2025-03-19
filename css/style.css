@@ -185,12 +185,19 @@ ol {
 .price-item .price-btn:hover,
 .price-item .pi-price,
 .price-item .tr-tag,
-.schedule-tab .nav-tabs .nav-item .nav-link.active,
+/* .schedule-tab .nav-tabs .nav-item .nav-link.active, */
 .site-btn {
 	background-image: -o-linear-gradient(330deg, #ee8425 0%, #f9488b 100%), -o-linear-gradient(330deg, #ee8425 0%, #f9488b 100%);
 	background-image: linear-gradient(120deg, #ee8425 0%, #f9488b 100%), linear-gradient(120deg, #ee8425 0%, #f9488b 100%);
 }
 
+.schedule-tab .nav-tabs .nav-item .nav-link.active{
+	background-color: #0096d3;
+}
+
+.bg-magenta{
+	background-color: #d22651;
+}
 /* buttons */
 
 .primary-btn {
@@ -201,9 +208,21 @@ ol {
 	color: #ffffff;
 	text-align: center;
 	border-radius: 50px;
-	background-image: -webkit-gradient(linear, left top, right top, from(#ee8425), to(#f9488b)), -webkit-gradient(linear, left top, right top, from(#ee8425), to(#f9488b));
+	/* background-image: -webkit-gradient(linear, left top, right top, from(#ee8425), to(#f9488b)), -webkit-gradient(linear, left top, right top, from(#ee8425), to(#f9488b));
 	background-image: -o-linear-gradient(left, #ee8425 0%, #f9488b 100%), -o-linear-gradient(left, #ee8425 0%, #f9488b 100%);
-	background-image: linear-gradient(to right, #ee8425 0%, #f9488b 100%), linear-gradient(to right, #ee8425 0%, #f9488b 100%);
+	background-image: linear-gradient(to right, #ee8425 0%, #f9488b 100%), linear-gradient(to right, #ee8425 0%, #f9488b 100%); */
+	background-color: #d22651;
+}
+
+.yellow-btn{
+	background-color: #f5921e;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 12px 40px;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 50px;
 }
 
 .site-btn {
@@ -532,7 +551,7 @@ ol {
 }
 
 .ha-text {
-	padding-top: 74px;
+	padding-top: 15px;
 }
 
 .ha-text h2 {
@@ -1157,7 +1176,7 @@ ol {
 -----------------------*/
 
 .footer-section {
-	background: #171822;
+	/* background: #171822; */
 	padding-top: 50px;
 	padding-bottom: 60px;
 }
