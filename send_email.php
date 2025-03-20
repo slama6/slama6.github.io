@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bodyPaymentSk .= "VS: $name $uuid\n";
     $bodyPaymentSk .= "Price: $ticket \n\n\n";
     $bodyPaymentSk .= "Po uhradení prevodu obdržíte do e-mailovej schránky potvrdenie vstupu. \n\n";
-    $bodyPaybodyPaymentSkment .= "Ďakujeme.\n S pozdravom,\n NextGen Team.";
+    $bodyPaymentSk .= "Ďakujeme.\n S pozdravom,\n NextGen Team.";
     
     $headersPayment = "From: nextGen@sector.sk\r\n";
     $headersPayment .= "Reply-To: $email\r\n";
