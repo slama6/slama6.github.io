@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST["email"]);
   
 
-    $to = "changeMail@email.com"; // Replace with your email
+    $to = "info@ngxp.sk"; // Replace with your email
     $subject = "Žiadosť o spoluprácu na NGXP";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bodyRequestSk .= "Ďakujeme za Vašu žiadosť o spoluprácu. Náš tím Vás bude kontaktovať v čo najbližšej dobe.\n\n\n S pozdravom,\n NextGen Team.";
     $bodyRequestSk .= "Táto správa bola vygenerovaná automaticky, nedpovedajte na ňu.\n";
    
-    $headersRequest = "From: nextGen@sector.sk\r\n";
+    $headersRequest = "From: info@ngxp.sk\r\n";
     $headersRequest .= "Reply-To: $email\r\n";
     $headersRequest .= "Content-Type: text/plain; charset=UTF-8\r\n";
 

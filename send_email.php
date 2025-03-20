@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST["message"]);
     $uuid = uniqid('', true);
 
-    $to = "changeMail@email.com"; // Replace with your email
+    $to = "info@ngxp.sk"; // Replace with your email
     $subject = "New Ticket Order from $name";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
